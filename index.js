@@ -1,23 +1,44 @@
-// not working, idk why maybe i need to download the extensions in vscode?
+document.addEventListener('DOMContentLoaded', function() {
+    const wrapper = document.querySelector('.wrapper');
+    const registerLink = document.querySelector('.register-link');
+    const loginLink = document.querySelector('.login-link');
+    const registerWrapper = document.querySelector('.register-wrapper');
+    const loginWrapper = document.querySelector('.login-wrapper');
 
-const wrapper = document.querySelector('wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.login');
-const iconClose = document.querySelector('.icon-close');
+    registerLink.addEventListener('click', () => {
+        loginWrapper.style.display = 'none'; // Hide login form
+        registerWrapper.style.display = 'block'; // Show register form
+    });
 
-registerLink.addEventListener('click', ()=> {
-    wrapper.classList.add('active');
+    loginLink.addEventListener('click', () => {
+        
+        registerWrapper.style.display = 'none'; // Hide register form
+        loginWrapper.style.display = 'block'; // Show login form
+    });
 });
 
-loginLink.addEventListener('click', ()=> {
-    wrapper.classList.remove('active');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.querySelector('.login-wrapper form');
 
-btnPopup.addEventListener('click', ()=> {
-    wrapper.classList.add('active-popup');
-});
+    loginForm.addEventListener('submit', function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
 
-iconClose.addEventListener('click', ()=> {
-    wrapper.classList.remove('active-popup');
+        // Get the input values
+        const emailInput = document.querySelector('.login-wrapper input[type="email"]');
+        const passwordInput = document.querySelector('.login-wrapper input[type="password"]');
+        
+        // Get the values entered by the user
+        const enteredEmail = emailInput.value;
+        const enteredPassword = passwordInput.value;
+
+        // Check if the entered values match the hardcoded values
+        if (enteredEmail === "hi@gmail.com" && enteredPassword === "hihihi") {
+            // Redirect to the desired HTML page
+            window.location.href = "home.html"; // Change "success.html" to your desired page
+        } else {
+            // Display an error message or handle invalid input
+            alert("Incorrect email or password. Please try again.");
+        }
+    });
 });
