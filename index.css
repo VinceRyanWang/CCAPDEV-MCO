@@ -1,3 +1,9 @@
+/* Initially hidden */
+.register-wrapper {
+    display: none;
+}
+
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +11,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header styling */
 header {
     position: fixed;
     top: 0;
@@ -18,27 +36,14 @@ header {
     z-index: 99;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url('background.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-
-
-}
-
-/* Title */
+/* Logo styling */
 .logo {
     font-size: 2em;
     color: white;
     user-select: none;
-
 }
 
-/* naviagation bar */
+/* Navigation styling */
 .navigation a {
     position: relative;
     font-size: 1.1em;
@@ -46,12 +51,10 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
-
 }
 
-
-/* login button */
-.navigation .login {
+/* Login button styling */
+.navigation .btnLogin-popup {
     width: 130px;
     height: 50px;
     background: transparent;
@@ -66,13 +69,12 @@ body {
     transition: .5s;
 }
 
-.navigation .login:hover {
+.navigation .btnLogin-popup:hover {
     background: white;
     color: black;
-
 }
 
-/* login form */
+/* Form wrapper styling */
 .wrapper {
     position: relative;
     width: 400px;
@@ -85,65 +87,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
 }
-
 
 .wrapper .active {
     height: 520px;
-
-
 }
 
-.wrapper .form-box-login {
+/* Form box styling */
+.wrapper .form-box {
     width: 100%;
     padding: 40px;
 }
 
-.wrapper .form-box-login {
-    transform: translateX(0px);
-}
-
-.wrapper .active .form-box-login {
-    transition: none;
-    transform: translateX(-400px);
-}
-
-/* registration form */
-.wrapper .form-box-register {
-    position: absolute;
-    transition: none;
-    transform: translateX(400px)
-
-} 
-
-.wrapper .active .form-box-register {
-    transform: translateX(0px);
-}
-
-/* login form - Close Button*/
-.wrapper .icon-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: black;
-    font-size: 2em;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
-}
-
+/* Form box title styling */
 .form-box h2 {
     font-size: 2em;
     color: black;
     text-align: center;
 }
-/* login form - Email & Password */
+
+/* Form input styling */
 .input-box {
     position: relative;
     width: 100%;
@@ -178,7 +143,6 @@ body {
     color: black;
     font-weight: 600;
     padding: 0 35px 0 5px;
-
 }
 
 .input-box .icon {
@@ -189,8 +153,8 @@ body {
     line-height: 57px;
 }
 
-/* login form - Remember me */
-.rememberMe {
+/* Remember me styling */
+.remember-forgot {
     font-size: .9em;
     color: black;
     font-weight: 500;
@@ -199,22 +163,21 @@ body {
     justify-content: space-between;
 }
 
-.rememberMe label input {
+.remember-forgot label input {
     accent-color: black;
     margin-right: 3px;
-
 }
 
-.rememberMe a {
+.remember-forgot a {
     color: black;
     text-decoration: none;
 }
 
-.rememberMe a:hover {
+.remember-forgot a:hover {
     text-decoration: underline;
 }
 
-/* login form - Login Button */
+/* Login button styling */
 .btn {
     width: 100%;
     height: 45px;
@@ -228,7 +191,7 @@ body {
     font-weight: 500;
 }
 
-/* login form - register link */
+/* Login/register styling */
 .login-register {
     font-size: .9em;
     color: black;
