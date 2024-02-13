@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <!--Might make this the new index-->
-        <!--IDK-->
         <meta charset="UTC-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width =device-width,initial-scale=1.0">
@@ -13,27 +11,29 @@
 
         <!--Style Sheet-->
         <link rel="stylesheet" href="index.css">
+        <style>
+            /* Your CSS styles for the register and login wrappers */
+            .register-wrapper {
+                /* Initially hidden */
+                display: none;
+            }
+        </style>
 
     </head>
 
     <body>
+        <!--Top bar-->
         <header>
             <h2 class="logo"> CCAPDEV MCO</h2>
-            <!--Top bar-->
             <nav class="navigation">
-                <button class="login"> Login </button>
+                <button class="btnLogin-popup"> Login </button>
             </nav>
-
         </header>
-
 
         <!--Login form-->
         <div class="wrapper">
 
-            <span class="icon-close"> 
-                <ion-icon name="close-outline"></ion-icon>
-            </span>
-            <div class="form-box-login">
+            <div class="form-box login login-wrapper">
                 <h2> Login </h2>
                 <form action="#">
 
@@ -56,7 +56,7 @@
                     </div>
 
                     <!--remember Me-->
-                    <div class="rememberMe">
+                    <div class="remember-forgot">
                         <label><input type="checkbox"> Remember me</label>
                         <a href="#"> Forgot Password? </a>
                     </div>
@@ -70,7 +70,7 @@
             </div>
 
             <!--register form-->
-            <div class="form-box-register">
+            <div class="form-box register register-wrapper">
                 <h2> Registration </h2>
                 <form action="#">
 
@@ -107,5 +107,6 @@
         <!--Icon JavaScript-->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
     </body>
 </html>
