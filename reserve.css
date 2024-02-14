@@ -124,28 +124,6 @@ body {
     justify-content: center;
     margin-top: 30px;
   }
-  .dates {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .dates-item {
-    width: 50px;
-    height: 40px;
-    background: rgb(233, 233, 233);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px 0;
-    border-radius: 2mm;
-    cursor: pointer;
-  }
-  .day {
-    font-size: 12px;
-  }
   .times {
     width: 100%;
     display: flex;
