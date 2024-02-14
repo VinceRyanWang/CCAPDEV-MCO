@@ -49,29 +49,6 @@ body {
     font-size: 16px;
     font-weight: 600;
   }
-  .status {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .item {
-    font-size: 12px;
-    position: relative;
-  }
-  .item::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -12px;
-    transform: translate(0, -50%);
-    width: 10px;
-    height: 10px;
-    background: rgb(28, 185, 120);
-    outline: 0.2mm solid rgb(120, 120, 120);
-    border-radius: 0.3mm;
-  }
 
   input {
     display: none;
