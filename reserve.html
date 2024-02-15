@@ -4,10 +4,10 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab Selection</title>
+    <title>Lab Booking</title>
 
     <!--Style Sheet-->
-    <link rel="stylesheet" href="setVisibility.css">
+    <link rel="stylesheet" href="reserve.css">
 
     <!--Google Fonts and Icons-->
     <link
@@ -25,30 +25,116 @@
   <body>
 
 
-    <div class="rooms">
+    <div class="lab">
       <div class="form">
         <div class="slot-selector">
 
           <!--Lab Name-->
           <div class="head">
-            <div class="title">Set Reservation</div>
+            <div class="title">G101</div>
           </div>
 
-          <div class="view-slider">
-
-            <!--lab Slots-->
+          <div class="seats">
             <div class="status">
-              <input type="radio" name="view" id="l1" checked />
-              <label for="l1" class="view"> Visible</label>
-              <input type="radio" id="l2" name="view" />
-              <label for="l2" class="view"> Anonymous </label>
-
+              <div class="item">Available</div>
+              <div class="item">Booked</div>
+              <div class="item">Selected</div>
             </div>
+
+            <!--Box slots-->
+            <div class="all-seats">
+              <input type="checkbox" name="box" id="s1" />
+              <label for="s1" class="seat booked"></label>
+            </div>
+          </div>
+
+          <input type="date">
+
+          <div class="timings">
+
+            <!--Time Slots-->
+            <div class="times">
+              <input type="radio" name="time" id="t1" checked />
+              <label for="t1" class="time">7:00 - 7:30</label>
+              <input type="radio" id="t2" name="time" />
+              <label for="t2" class="time"> 8:00 - 8:30 </label>
+              <input type="radio" id="t3" name="time" />
+              <label for="t3" class="time"> 9:00 - 9:30 </label>
+              <input type="radio" id="t4" name="time" />
+              <label for="t4" class="time"> 10:00 - 10:30 </label>
+            </div>
+
+            <!--Time Slots-->
+            <div class="times">
+              <input type="radio" name="time" id="t5">
+              <label for="t5" class="time">11:00 - 11:30</label>
+              <input type="radio" id="t6" name="time" />
+              <label for="t6" class="time"> 12:00 - 12:30 </label>
+              <input type="radio" id="t7" name="time" />
+              <label for="t7" class="time"> 13:00 - 13:30 </label>
+              <input type="radio" id="t8" name="time" />
+              <label for="t8" class="time"> 14:00 - 14:30 </label>
+            </div>
+
+            <!--Time Slots-->
+            <div class="times">
+              <input type="radio" name="time" id="t9">
+              <label for="t9" class="time">15:00 - 15:30</label>
+              <input type="radio" id="t10" name="time" />
+              <label for="t10" class="time"> 16:00 - 16:30 </label>
+              <input type="radio" id="t11" name="time" />
+              <label for="t11" class="time"> 17:00 - 17:30 </label>
+              <input type="radio" id="t12" name="time" />
+              <label for="t12" class="time"> 18:00 - 18:30 </label>
+            </div>
+
           </div>
         </div>
         <div class="book">
-            <button type="button" onclick="window.location.href = 'reserve.html';">Back</button>
-            <a href="confirmation.html"><button type="button">Next</button></a>
+          <button type="button" onclick="window.location.href = 'home.html';">Back</button>
+          <div class="total">
+            <span> Seats </span>
+            <div class="amount">0</div>
+          </div>
+          <a href="setVisibility.html"><button type="button">Book</button></a>
         </div>
       </div>
     </div>
+
+
+<script>
+    let seatsContainer = document.querySelector(".all-seats");
+    for (var i = 0; i < 59; i++) {
+      let randint = Math.floor(Math.random() * 2);
+      let booked = randint === 1 ? "booked" : "";
+      let seatHtml = '<input type="checkbox" name="box" id="s' + (i + 1) + '" />';
+      seatHtml += '<label for="s' + (i + 1) + '" class="seat ' + booked + '"></label>';
+      seatsContainer.insertAdjacentHTML("beforeend", seatHtml);
+    }
+
+    let bookedSeats = document.querySelectorAll(".seat.booked");
+    bookedSeats.forEach((seat) => {
+      let reservedText = document.createElement("span");
+      reservedText.classList.add("reserved-text");
+      reservedText.textContent = "Reserved";
+      seat.appendChild(reservedText);
+    });
+
+    let box = seatsContainer.querySelectorAll("input");
+    box.forEach((ticket) => {
+      ticket.addEventListener("change", () => {
+        let amount = document.querySelector(".amount").innerHTML;
+        amount = Number(amount);
+
+        if (ticket.checked) {
+          amount += 1;
+        } else {
+          amount -= 1;
+        }
+        document.querySelector(".amount").innerHTML = amount;
+      });
+    });
+</script>
+
+  </body>
+</html>
