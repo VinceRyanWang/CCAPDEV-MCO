@@ -36,17 +36,25 @@ body {
     text-decoration: none;
 }
 
-.edit {
+.edit1 {
     position: absolute;
-    right: 40px;
-    top: 120px;
+    right: 100px;
+    top: 20px;
+    color: black;
 }
 
 .edit2 {
     position: absolute;
     right: 40px;
+    top: 120px;
+}
+
+.edit3 {
+    position: absolute;
+    right: 40px;
     top: 100px;
 }
+
 
 .card {
     position: relative;
