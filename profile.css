@@ -36,26 +36,6 @@ body {
     text-decoration: none;
 }
 
-.edit1 {
-    position: absolute;
-    right: 100px;
-    top: 20px;
-    color: black;
-}
-
-.edit2 {
-    position: absolute;
-    right: 40px;
-    top: 120px;
-}
-
-.edit3 {
-    position: absolute;
-    right: 40px;
-    top: 100px;
-}
-
-
 .card {
     position: relative;
     display: flex;
@@ -65,3 +45,37 @@ body {
 .content {
     background-color: whitesmoke;
 }
+
+.profile-pic {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-pic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+}
+
+form input[type="file"] {
+          display: none;
+          cursor: pointer;
+ }
