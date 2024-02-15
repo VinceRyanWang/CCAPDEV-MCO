@@ -35,9 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Check if the entered values match the hardcoded values
         if (enteredEmail === "hi@gmail.com" && enteredPassword === "hihihi") {
             // Redirect to the desired HTML page
-            window.location.href = "home.html"; // Change "success.html" to your desired page
-        } else {
-            // Display an error message or handle invalid input
+            window.location.href = "home.html";
+        } 
+        
+        else if (enteredEmail === "hi.tech@gmail.com" && enteredPassword === "tech") {
+            // Redirect to the desired HTML page
+            window.location.href = "home_tech.html";
+        } 
+
+        else {
             alert("Incorrect email or password. Please try again.");
         }
     });
