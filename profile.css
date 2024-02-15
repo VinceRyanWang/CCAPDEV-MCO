@@ -36,6 +36,18 @@ body {
     text-decoration: none;
 }
 
+.edit {
+    position: absolute;
+    right: 40px;
+    top: 120px;
+}
+
+.edit2 {
+    position: absolute;
+    right: 40px;
+    top: 100px;
+}
+
 .card {
     position: relative;
     display: flex;
