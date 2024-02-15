@@ -29,7 +29,16 @@
                     <div class="col-md-4 mt-1">
                         <div class="card text-center sidebar">
                             <div class="card-body">
-                                <img src="blank.jpg" class="circle" width="150">
+                                <form action="upload.php" method="post" enctype="multipart/form-data">
+                                    <label for="fileToUpload">
+                                        <div class="profile-pic" style="background-image: url('blank.jpg')">
+                                      <span class="glyphicon glyphicon-camera"></span>
+                                      <span>Change Image</span>
+                                  </div>
+                                  </label>
+                                  <input type="File" name="fileToUpload" id="fileToUpload">
+                                </form>
+                               
                                 <div class="edit1">
                                     <ion-icon name="create-outline"></ion-icon>
                                 </div>
