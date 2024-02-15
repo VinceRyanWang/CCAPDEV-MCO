@@ -43,6 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = "home_tech.html";
         } 
 
+        else if (enteredEmail === "sir_art_student@gmail.com" && enteredPassword === "sirart") {
+            // Redirect to the desired HTML page
+            window.location.href = "home.html";
+        } 
+
         else {
             alert("Incorrect email or password. Please try again.");
         }
